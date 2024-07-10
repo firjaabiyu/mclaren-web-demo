@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background: black;
+            font-family: 'Baskervville', serif;
+        }
+
+
+        html,
+        body {
+            scroll-behavior: smooth;
+            scroll-padding: 10rem;
+            overflow-x: hidden;
+        }
+
+        /* navbar */
+        .navbar {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 3%;
+        }
+
+        .navbar-logo {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-vecke {
+            width: 40px;
+        }
+
+        .nav-item {
+            color: #F1F1F1;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li {
+            display: flex;
+            margin: 30px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        li:hover {
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        a {
+            color: #f1f1f1;
+            text-decoration: none;
+        }
+
+        .home {
+            font-style: italic;
+            font-weight: 900;
+            background-color: #E9681E;
+            padding: 5px 25px 5px 25px;
+            border-radius: 60px;
+        }
+
+
+
+        .nav-english {
+            width: 20%;
+            color: #F1F1F1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        /* welcome text */
+        .hero {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            margin-top: 5%;
+
+        }
+
+        .text-atas {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            color: #F1F1F1;
+        }
+
+        .judul {
+            font-size: 70px;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            font-weight: 900;
+        }
+
+        .desk {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            margin-top: 1%;
+        }
+
+        .mclaren {
+            color: #E9681E;
+        }
+
+        .lokasi {
+            color: #F1F1F1;
+            margin-top: 17%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+        }
+
+        /* btn sign up */
+        .btn-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+        }
+
+        .explore-a {
+            text-decoration: none;
+            color: #E9681E;
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            border: #E9681E 2px solid;
+            margin-right: 20px;
+            font-size: 20px;
+            position: relative;
+            transition: 0.3s ease-in-out;
+        }
+
+        .explore-a span {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .explore-a:hover span {
+            visibility: visible;
+            opacity: 1;
+            background-color: transparent;
+        }
+
+        .explore-a:hover {
+            color: #F1F1F1;
+            border: 0px;
+            background-color: #E9681E;
+            padding: 10px 35px 10px 25px;
+            box-shadow: #f1f1f1ac 0px 0px 7px;
+        }
+
+        .signup-a {
+            text-decoration: none;
+            color: #F1F1F1;
+            padding: 10px 20px 10px 20px;
+            background-color: #E9681E;
+            border-radius: 10px;
+            font-style: italic;
+            font-size: 20px;
+            margin-left: 20px;
+            transition: 0.2s;
+        }
+
+        .signup-a:hover {
+            background-color: transparent;
+            border: #E9681E 2px solid;
+            color: #E9681E;
+            box-shadow: #f1f1f1ac 0px 0px 7px;
+        }
+
+        /* mclaren logo */
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .logos {
+            overflow: hidden;
+            padding: 60px 0;
+            white-space: nowrap;
+            position: relative;
+            margin-top: 100px;
+        }
+
+        .logos:before,
+        .logos:after {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            content: "";
+            z-index: 2;
+        }
+
+        .logos:before {
+            left: 0;
+            background: linear-gradient(to left, rgba(255, 255, 255, 0), );
+        }
+
+        .logos:after {
+            right: 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), );
+        }
+
+        .logos:hover .logos-slide {
+            animation-play-state: paused;
+        }
+
+        .logos-slide {
+            display: inline-block;
+            animation: 40s slide infinite linear;
+        }
+
+        .logos-slide img {
+            width: 250px;
+            margin: 0 40px;
+        }
+
+        /* car section */
+        .supercar-section {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            color: #F1F1F1;
+            margin-top: 4%;
+            width: 100vw;
+        }
+
+        .judul-supercar {
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+        }
+
+        .sup {
+            font-style: italic;
+        }
+
+        .desk-supercar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-top: 1%;
+        }
+
+        .rich {
+            font-style: italic;
+        }
+
+        .card-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 70px;
+            position: relative;
+        }
+
+        .card-750s {
+            padding: 40px;
+            z-index: 0;
+        }
+
+        .card-750s img {
+            width: 700px;
+        }
+
+        .txt-btns {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            position: absolute;
+            top: 15%;
+            left: 16%;
+            background: white;
+            color: black;
+        }
+
+        .asup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: italic;
+            background: white;
+            font-size: 23px;
+            font-weight: 900;
+        }
+
+        .car-model {
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 53px;
+            font-weight: 700;
+        }
+
+        .larens {
+            background: white;
+            color: #BE192D;
+        }
+
+        .btn-supercar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 14%;
+            background: white;
+
+        }
+
+        .btn-discover {
+            background: white;
+        }
+
+        .s {
+            background: white;
+            text-decoration: none;
+            color: #f1f1f1;
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            border: black 2px solid;
+            background-color: #BE192D;
+            margin-right: 20px;
+            font-size: 20px;
+            position: relative;
+            transition: 0.3s ease-in-out;
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        .s span {
+            background: transparent;
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .s:hover span {
+            visibility: visible;
+            opacity: 1;
+            background-color: transparent;
+        }
+
+        .s:hover {
+            color: black;
+            border: 0px;
+            background: white;
+            border: black 2px solid;
+            padding: 10px 35px 10px 25px;
+        }
+
+        .config {
+            background: white;
+            /* margin-left: 20px; */
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px 10px 20px;
+            background-color: white;
+            border: black 2px solid;
+            border-radius: 10px;
+            font-style: italic;
+            font-size: 20px;
+            /* margin-left: 20px; */
+            transition: 0.2s;
+        }
+
+        .config:hover {
+            background-color: transparent;
+            border: black 2px solid;
+            background: #BE192D;
+            color: white;
+        }
+
+        /* 765 LT */
+
+        .card-765lt {
+            padding: 40px;
+        }
+
+        .card-765lt img {
+            width: 700px;
+        }
+
+        .txt-btnlt {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            position: absolute;
+            top: 13%;
+            left: 64%;
+            background: white;
+            color: black;
+        }
+
+        .asuplt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: italic;
+            background: white;
+            font-size: 23px;
+            font-weight: 900;
+        }
+
+        .car-modellt {
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 53px;
+            font-weight: 700;
+        }
+
+        .larenlt {
+            background: white;
+            color: #E9681E;
+        }
+
+        .btn-supercarlt {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 14%;
+            background: white;
+        }
+
+        .btn-discoverlt {
+            background: white;
+        }
+
+        .lt {
+            background: white;
+            text-decoration: none;
+            color: #f1f1f1;
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            border: black 2px solid;
+            background-color: #E9681E;
+            margin-right: 20px;
+            font-size: 20px;
+            position: relative;
+            transition: 0.3s ease-in-out;
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        .lt span {
+            background: transparent;
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .lt:hover span {
+            visibility: visible;
+            opacity: 1;
+            background-color: transparent;
+        }
+
+        .lt:hover {
+            color: black;
+            border: 0px;
+            background: white;
+            border: black 2px solid;
+            padding: 10px 35px 10px 25px;
+        }
+
+
+        .configlt {
+            background: white;
+            /* margin-left: 20px; */
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px 10px 20px;
+            background-color: white;
+            border: black 2px solid;
+            border-radius: 10px;
+            font-style: italic;
+            font-size: 20px;
+            /* margin-left: 20px; */
+            transition: 0.2s;
+        }
+
+        .configlt:hover {
+            background-color: transparent;
+            border: black 2px solid;
+            background: #E9681E;
+            color: white;
+        }
+
+        /* solus GT */
+        .card-solus {
+            padding: 40px;
+        }
+
+        .card-solus img {
+            width: 1500px;
+        }
+
+        .solus-crd {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+        }
+
+        .txt-btnsolus {
+            display: grid;
+            align-items: start;
+            justify-content: start;
+            z-index: 1;
+            position: absolute;
+            top: 15%;
+            left: 8%;
+            background: transparent;
+            color: black;
+        }
+
+        .asupsolus {
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            font-style: italic;
+            background: transparent;
+            font-size: 23px;
+            font-weight: 900;
+        }
+
+        .car-modelsolus {
+            background: transparent;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            font-size: 53px;
+            font-weight: 700;
+        }
+
+        .laren {
+            background: white;
+            color: #385F4D;
+        }
+
+        .btn-supercarsolus {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            margin-top: 14%;
+            background: transparent;
+
+        }
+
+        .btn-discoversolus {
+            background: transparent;
+        }
+
+        .solus {
+            background: white;
+            text-decoration: none;
+            color: #f1f1f1;
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            border: black 2px solid;
+            background-color: #385F4D;
+            margin-right: 20px;
+            font-size: 20px;
+            position: relative;
+            transition: 0.3s ease-in-out;
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        .solus span {
+            background: transparent;
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .solus:hover span {
+            visibility: visible;
+            opacity: 1;
+            background-color: transparent;
+        }
+
+        .solus:hover {
+            color: black;
+            border: 0px;
+            background: white;
+            border: black 2px solid;
+            padding: 10px 35px 10px 25px;
+        }
+
+        .configsolus {
+            background: white;
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px 10px 20px;
+            background-color: white;
+            border: black 2px solid;
+            border-radius: 10px;
+            font-style: italic;
+            font-size: 20px;
+            transition: 0.2s;
+        }
+
+        .configsolus:hover {
+            background-color: transparent;
+            border: black 2px solid;
+            background: #385F4D;
+            color: white;
+        }
+
+        .footer {
+            width: 100%;
+            height: 20vh;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: #E9681E;
+        }
+
+        .footer p {
+            background: #E9681E;
+            color: rgba(255, 255, 255, 0.756);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .footer img {
+            background: #E9681E;
+            margin-top: -100px;
+        }
+
+        @media screen and (max-width: 1400px) {
+            .card-solus img {
+                width: 1300px;
+            }
+
+            .card-765lt img {
+                width: 600px;
+            }
+
+            .card-750s img {
+                width: 600px;
+            }
+
+            .txt-btns {
+                top: 13%;
+                left: 14%;
+            }
+
+            .txt-btnlt {
+                top: 13%;
+                left: 64%;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .card-solus img {
+                width: 1000px;
+            }
+
+            .card-765lt img {
+                width: 450px;
+            }
+
+            .card-750s img {
+                width: 450px;
+            }
+
+            .txt-btns {
+                top: 13%;
+                left: 13%;
+            }
+
+            .txt-btnlt {
+                top: 13%;
+                left: 63%;
+            }
+
+            .asup {
+                font-size: 18px;
+            }
+
+            .car-model {
+                font-size: 43px;
+            }
+
+            .s {
+                font-size: 15px;
+            }
+
+            .config {
+                font-size: 15px;
+            }
+
+            .asuplt {
+                font-size: 18px;
+            }
+
+            .car-modellt {
+                font-size: 43px;
+            }
+
+            .lt {
+                font-size: 15px;
+            }
+
+            .configlt {
+                font-size: 15px;
+            }
+
+            .asupsolus {
+                font-size: 18px;
+            }
+
+            .car-modelsolus {
+                font-size: 43px;
+            }
+
+            .solus {
+                font-size: 15px;
+            }
+
+
+            .configsolus {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar {
+                display: grid;
+                margin-top: 10%;
+                height: 15vh;
+            }
+
+            .navbar-logo {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .logo-vecke {
+                width: 30px;
+            }
+
+            .nav-item {
+                color: #F1F1F1;
+                width: 100%;
+                background: transparent;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 20px;
+            }
+
+            li {
+                display: flex;
+                margin: 30px;
+                cursor: pointer;
+                font-size: 15px;
+            }
+
+            .nav-english {
+                display: none;
+            }
+
+            /* hero */
+            .hero {
+                margin-top: 13%;
+            }
+
+            .judul {
+                font-size: 40px;
+            }
+
+            .desk {
+                font-size: 14px;
+            }
+
+            .lokasi {
+                color: #F1F1F1;
+                margin-top: 17%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+            }
+
+            /* button signup */
+            .btn-hero {
+                margin-top: 20%;
+                margin-bottom: -20%;
+            }
+
+            .explore-a {
+                font-size: 17px;
+            }
+
+            .signup-a {
+                font-size: 17px;
+            }
+
+
+            /* logo */
+            .logos-slide img {
+                width: 100px;
+                margin: 0 20px;
+            }
+
+            /* car */
+            .supercar-section {
+                margin-top: 10%;
+            }
+
+            .judul-supercar {
+                font-size: 25px;
+            }
+
+            .desk-supercar {
+                font-size: 13px;
+                margin-top: 0%;
+            }
+
+
+            .card-area {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                margin-top: 70px;
+                position: relative;
+            }
+
+            .card-750s {
+                padding: 40px;
+                z-index: 0;
+            }
+
+            .card-750s img {
+                width: 300px;
+            }
+
+            .txt-btns {
+                top: 8%;
+                left: 25%;
+            }
+
+            .asup {
+                font-size: 13px;
+            }
+
+            .car-model {
+                font-size: 33px;
+            }
+
+
+            .btn-supercar {
+                margin-top: 10%;
+            }
+
+            .s {
+                font-size: 10px;
+            }
+
+            .s span {
+                display: none;
+            }
+
+            .s:hover span {
+                display: none;
+            }
+
+            .s:hover {
+                color: black;
+                border: 0px;
+                background: white;
+                border: black 2px solid;
+                padding: 10px 20px 10px 20px;
+            }
+
+            .config {
+                font-size: 10px;
+            }
+
+
+            /* 765 LT */
+
+            .card-765lt {
+                padding: 40px;
+            }
+
+            .card-765lt img {
+                width: 300px;
+            }
+
+            .txt-btnlt {
+                top: 58%;
+                left: 25%;
+            }
+
+            .asuplt {
+                font-size: 13px;
+            }
+
+            .car-modellt {
+                font-size: 33px;
+            }
+
+
+            .lt {
+                font-size: 10px;
+            }
+
+            .lt span {
+                display: none;
+            }
+
+            .lt:hover span {
+                display: none;
+            }
+
+            .lt:hover {
+                padding: 10px 20px 10px 20px;
+            }
+
+            .btn-supercarlt {
+                margin-top: 10%;
+            }
+
+            .configlt {
+                font-size: 10px;
+            }
+
+
+
+            /* solus GT */
+            .card-solus {
+                display: none;
+            }
+
+            /* footer */
+            .footer p {
+                margin-bottom: 20px;
+            }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img class="logo-vecke" src="mclaren/logo-vecke.png" alt="vecke-logo">
+        </div>
+        <div class="nav-item">
+            <ul>
+                <li class="home">Home</li>
+                <li><a class="explore" href="explore.html">explore</a></li>
+                <li><a class="contact" href="">contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-english">
+            <p>English</p>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="text-atas">
+            <div class="judul">
+                <p>Welcome To zia butet</p>
+            </div>
+            <div class="desk">
+                <p>we have what you need, a <span class="mclaren">mclaren</span> supercars. </p>
+            </div>
+        </div>
+        <div class="lokasi">
+            <p>◎ woking, england.</p>
+        </div>
+        <div class="btn-hero">
+            <div class="btn-area">
+                <a class="explore-a" href="explore.html">Explore <span>→</span></a>
+                <a class="signup-a" href="">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="logos">
+        <div class="logos-slide">
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+
+        </div>
+
+        <div class="logos-slide">
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+            <img src="mclaren/mclaren-vecke.png" />
+        </div>
+    </div>
+
+    <div class="supercar-section">
+        <div class="judul-supercar">
+            <p>Mclaren <span class="sup">supercar</span> model</p>
+        </div>
+        <div class="desk-supercar">
+            <p>all the models here are for <span class="rich">rich</span> people only.</p>
+        </div>
+
+        <div class="card-area">
+            <div class="card-750s">
+                <img src="mclaren/card-570s.png" alt="mclaren-570s">
+
+                <div class="txt-btns">
+                    <p class="asup">a supercar</p>
+                    <p class="car-model"><span class="larens">Mclaren</span> - 750s</p>
+                    <div class="btn-supercar">
+                        <div class="btn-discover">
+                            <a class="s" href="750s.html">Discover <span>→</span></a>
+                        </div>
+                        <div class="btn-config">
+                            <a class="config" href="">configure</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-765lt">
+                <img src="mclaren/card-765lt.png" alt="mclaren-765LT">
+
+                <div class="txt-btnlt">
+                    <p class="asuplt">a supercar</p>
+                    <p class="car-modellt"><span class="larenlt">Mclaren</span> - 720s</p>
+                    <div class="btn-supercarlt">
+                        <div class="btn-discoverlt">
+                            <a class="lt" href="720s.html">Discover <span>→</span></a>
+                        </div>
+                        <div class="btn-configlt">
+                            <a class="configlt" href="">configure</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="solus-crd">
+            <div class="card-solus">
+                <img src="mclaren/card-solus.png" alt="solusGT">
+
+                <div class="txt-btnsolus">
+                    <p class="asupsolus">a supercar</p>
+                    <p class="car-modelsolus"><span class="laren">Mclaren</span> - Solus GT®</p>
+                    <div class="btn-supercarsolus">
+                        <div class="btn-discoversolus">
+                            <a class="solus" href="solus.html">Discover <span>→</span></a>
+                        </div>
+                        <div class="btn-config">
+                            <a class="configsolus" href="">configure</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>powered by :</p>
+        <img src="mclaren/mclaren-footer.png" alt="mclaren" width="300px">
+    </div>
+</body>
+
+</html>

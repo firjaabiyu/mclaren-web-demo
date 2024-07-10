@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .btn-hero {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            margin: 6%;
+        }
+
+        .back-a {
+            text-decoration: none;
+            color: #F1F1F1;
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            border: black 2px solid;
+            background: #385F4D;
+            /* margin-right: 20px; */
+            font-size: 20px;
+            position: relative;
+            transition: 0.3s ease-in-out;
+            font-style: italic;
+        }
+
+        .back-a span {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .back-a:hover span {
+            visibility: visible;
+            opacity: 1;
+            padding-right: 10px;
+            background-color: transparent;
+        }
+
+        .back-a:hover {
+            color: black;
+            border: 0px;
+            background-color: transparent;
+            border: black 2px solid;
+            padding: 10px 35px 10px 25px;
+            box-shadow: #f1f1f1ac 0px 0px 7px;
+        }
+
+        .img-discover-750s {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+        }
+
+        .area-text{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .text-desk {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5%;
+            width: 100vh;
+        }
+        .kiri{
+            width: 40%;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            font-weight: 500;
+            font-size: 30px;
+            padding-right: 50px;
+            margin-top: -36%;
+        }
+        .kanan{
+            width: 40%;
+            display: grid;
+            justify-content: end;
+            align-items: end;
+            font-weight: 100;
+            font-size: 20px;
+            padding-left: 50px;
+        }
+
+        .img-750s{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+            margin-bottom: 7%;
+        }
+        .phtos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+        .phtos a{
+           text-decoration: none;
+           color: black;
+        }
+        .footer {
+            width: 100%;
+            height: 20vh;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: #385F4D;
+        }
+
+        .footer p {
+            background: #385F4D;
+            color: rgba(255, 255, 255, 0.756);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .footer img {
+            background: #385F4D;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-hero">
+        <div class="btn-area">
+            <a class="back-a" href="index.html">Back ‎<span>←</span></a>
+        </div>
+    </div>
+
+    <div class="img-discover-750s">
+        <img src="mclaren/discover-2.png" alt="" style="width: 1000px;">
+    </div>
+
+    <div class="area-text">
+        <div class="text-desk">
+            <p class="kiri">The intersection of fantasy and reality - Solus GT.</p>
+            <p class="kanan">An extreme McLaren design concept born in the virtual racing world.Now made real. And ultra-rare. There will only ever be 25 Solus GTs. Rendered possible through McLaren’s position at the apex of motorsport, supercar and hypercar development – this is a pure expression of track driving focus and engagement. A single seater. With central closed cockpit and jet aircraft-style canopy. A ground-up design set free from the compromises of road and race regulations. The unique monocoque houses a naturally aspirated 5.2 litre V10 engine that revs beyond 10,000rpm and generates more than 840PS. In a ruthlessly pared down machine that weighs less than 1,000kg and generates 1,200kg of downforce. It’s as close to the experience and feel of driving a Formula 1 car as you can get.</p>
+    
+        </div>
+    
+    </div>
+
+    <div class="img-750s">
+        <img src="mclaren/discover-solus.png" alt="" style="width: 800px;">
+        <p class="phtos">photos from - ‎ <a href="https://cars.mclaren.com/en/models">mclaren.com</a></p>
+    </div>
+
+    <div class="footer">
+        <p>powered by :</p>
+        <img src="mclaren/mclaren-footer.png" alt="mclaren" width="300px">
+    </div>
+</body>
+
+</html>

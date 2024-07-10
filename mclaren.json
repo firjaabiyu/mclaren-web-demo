@@ -1,0 +1,22 @@
+[
+    {
+        "merk" : "Mclaren",
+        "model" : "750s",
+        "img" : "mclaren/explore-570s.png"
+    },
+    {
+        "merk" : "Mclaren",
+        "model" : "750s Spider",
+        "img" : "mclaren/explore-720s.png"
+    },
+    {
+        "merk" : "Mclaren",
+        "model" : "720s",
+        "img" : "mclaren/720s.png"
+    },
+    {
+        "merk" : "Mclaren",
+        "model" : "Solus GT®",
+        "img" : "mclaren/explore-solus.png"
+    }
+]

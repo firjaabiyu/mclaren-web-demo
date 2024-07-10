@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .btn-hero {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            margin: 6%;
+        }
+
+        .back-a {
+            text-decoration: none;
+            color: #F1F1F1;
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            border: black 2px solid;
+            background: #E9681E;
+            /* margin-right: 20px; */
+            font-size: 20px;
+            position: relative;
+            transition: 0.3s ease-in-out;
+            font-style: italic;
+        }
+
+        .back-a span {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .back-a:hover span {
+            visibility: visible;
+            opacity: 1;
+            padding-right: 10px;
+            background-color: transparent;
+        }
+
+        .back-a:hover {
+            color: black;
+            border: 0px;
+            background-color: transparent;
+            border: black 2px solid;
+            padding: 10px 35px 10px 25px;
+            box-shadow: #f1f1f1ac 0px 0px 7px;
+        }
+
+        .img-discover-750s {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+        }
+
+        .img-discover-750s img {
+            width: 1100px;
+        }
+
+        .area-text {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-desk {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5%;
+            width: 100vh;
+        }
+
+        .kiri {
+            width: 40%;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            font-weight: 500;
+            font-size: 30px;
+            margin-top: -27%;
+        }
+
+        .kanan {
+            width: 50%;
+            display: grid;
+            justify-content: end;
+            align-items: end;
+            font-weight: 100;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        .img-750s {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+            margin-bottom: 7%;
+        }
+
+        .img-750s img {
+            width: 800px;
+        }
+
+        .phtos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        .phtos a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .footer {
+            width: 100%;
+            height: 20vh;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: #E9681E;
+        }
+
+        .footer p {
+            background: #E9681E;
+            color: rgba(255, 255, 255, 0.756);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .footer img {
+            background: #E9681E;
+            margin-top: -100px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .img-discover-750s img {
+                width: 1000px;
+            }
+
+            .kiri {
+                padding-right: 20px;
+                margin-top: -65%;
+            }
+
+            .img-750s img {
+                width: 600px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .img-discover-750s img {
+                width: 450px;
+            }
+
+            .btn-hero {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 15%;
+            }
+
+            .back-a {
+                font-size: 18px;
+            }
+
+
+            .text-desk {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                width: 100vh;
+            }
+
+            .kiri {
+                width: 70%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                margin-top: 10%;
+                margin-bottom: 5%;
+            }
+
+            .kanan {
+                width: 85%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+                padding-left: 30px;
+            }
+
+            .img-750s img {
+                width: 325px;
+            }
+
+            .footer p {
+                margin-bottom: 10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-hero">
+        <div class="btn-area">
+            <a class="back-a" href="index.html">Back ‎<span>←</span></a>
+        </div>
+    </div>
+
+    <div class="img-discover-750s">
+        <img src="mclaren/discover-1.png" alt="">
+    </div>
+
+    <div class="area-text">
+        <div class="text-desk">
+            <p class="kiri">Fierce elegance.</p>
+            <p class="kanan">A light and strong supercar shaped by the forces of nature. Honed by the elements. Poised
+                for attack. And ferociously fast. Yet beautifully made, tactile and effortlessly usable, every day.
+
+                The McLaren 720S coupe is purposeful and radical. With apex predator responses. This light and strong
+                supercar accelerates from 0-60mph in an incredible 2.8 seconds when provoked. And can cover a quarter of
+                a mile in 10.4 seconds. From a standing start.
+
+                But raw figures don’t reveal the whole story. There is pure driver engagement and contemporary luxury
+                here too. In depth. A thrilling, accessible, natural balance.
+
+                Evolution in full flight.</p>
+            <p></p>
+        </div>
+
+    </div>
+
+    <div class="img-750s">
+        <img src="mclaren/720s-discover.png" alt="">
+        <p class="phtos">photos from - ‎ <a href="https://cars.mclaren.com/en/models">mclaren.com</a></p>
+    </div>
+
+    <div class="footer">
+        <p>powered by :</p>
+        <img src="mclaren/mclaren-footer.png" alt="mclaren" width="300px">
+    </div>
+</body>
+
+</html>
